@@ -1,0 +1,14 @@
+version: "3.2"
+services:
+  cf_go:
+    container_name: cf_go
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - 8000:3000
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    volumes:
+      - .:/app 
